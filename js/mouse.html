@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <p> 마우스를 올려보세요. </p>
+    <script>
+       const p = document.querySelector("p")
+
+       function highlighttext() {
+           
+            p.style.color = "orange"
+            p.style.textDecoration ="underline"
+       }
+       function dehighlighttext() {
+            p.style.color = "black"
+            p.style.textDecoration = "none"
+       function warningtext() {
+            p.style.color = "red"
+
+       }
+       function infomationtext() {
+            p.style.color = "orange"
+       }
+       }
+       
+       
+      p.addEventListener("mouseover", highlighttext)
+      p.addEventListener("mouseout", dehighlighttext)
+      
+      
+
+
+    </script>
+
+
+
+
+    
+</body>
+</html>

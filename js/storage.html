@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="이름 입력">
+    <button> 저장</button>
+    <button> 삭제</button>
+    <p></p>
+    <script>
+        // input  태그에 입력한 값을 p 태그 출력
+        const input = document.querySelector("input")
+        const button = document.querySelector("button")
+        const p = document.querySelector("p")
+        
+        function welcometext(name) {
+            return `안녕하세요. ${name}님`
+        }
+
+
+        const savedname = localStorage.getItem("#name")
+        const deletebutton = document.querySelector("#")
+        if (savedname) {
+            p.textContent =welcometext(savedname)
+        }
+
+        button.addEventListener("click", () =>{
+            //스토리지 저장
+            localStorage.setItem("name", input.value) 
+            // 화면 출력
+            p.textContent = input.value
+
+        
+        })
+        deletebutton.addEventListener("click", ()=>{
+              localStorage.removeItem("name")
+              p.textContent = "";
+        })
+
+    </script>
+
+    
+</body>
+</html>
